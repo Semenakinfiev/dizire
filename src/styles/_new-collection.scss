@@ -1,0 +1,95 @@
+.new-collection {
+    padding-bottom: 40px;
+    &__picture-card {
+    }
+    &__title {
+        text-align: center;
+        @extend %font-monserat;
+        font-size: 36px;
+        line-height: 51px;
+        color: $base_background_color;
+        position: relative;
+        padding-bottom: 30px;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 43%;
+            width: 252px;
+            height: 1px;
+            background-color: rgba(151, 151, 151, 1);
+        }
+    }
+    &__text {
+        margin: 0 auto;
+        padding-top: 25px;
+        padding-bottom: 30px;
+        width: 730px;
+        text-align: center;
+        color: rgba(90, 90, 90, 1);
+    }
+}
+
+.collection {
+    padding-bottom: 50px;
+    &__pictures {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+
+    }
+    &__picture-card {
+        width: 350px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+            .collection__picture-hover {
+                opacity: 1;
+            }
+            .collection__img {
+                opacity: .7;
+            }
+        }
+
+    }
+
+    &__picture-hover {
+        max-width: 350px;
+        max-height: 350px;
+        opacity: 0;
+        transition: all .5s;
+        position: absolute;
+    }
+    &__hover-title {
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        color: rgba(54, 56, 56, 1);
+        padding-bottom: 19px;
+        text-align: center;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 7%;
+            bottom: 0;
+            width: 200px;
+            height: 1px;
+            background-color: rgba(109, 114, 120, 1);
+        }
+    }
+    &__hover-text {
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: center;
+        color: rgba(112, 112, 112, 1);
+        padding-top: 19px;
+    }
+}

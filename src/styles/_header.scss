@@ -1,0 +1,38 @@
+
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 110px;
+    }
+    &__btn {
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+}
+
+.menu {
+    padding-right: 35px;
+    &__list {
+        display: flex;
+    }
+    &__list-item {
+        padding-right: 15px;
+        padding-left: 35px;
+        cursor: pointer;
+    }
+    &__list-link {
+        @extend %font-monserat;
+        line-height: 22px;
+        color: $base_text_color;
+    }
+}
+
+.logo {
+    margin: 0 auto;
+}
+

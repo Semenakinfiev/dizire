@@ -1,0 +1,119 @@
+
+.top {
+    &__inner {
+        position: relative;
+        padding-bottom: 0px;
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: (url(../img/main_slider.jpg));
+            width: 100%;
+            height: 722px;
+            top: 0;
+            z-index: -2;
+        }
+    }
+    &__slider {
+       width: 1260px;
+       height: 800px;
+       overflow: hidden;
+       position: relative;
+       margin-left: 10%;
+    }
+    &__slider-info {
+        max-width: 645px;
+        align-items: center;
+        margin-left: -22px;
+        z-index: -1;
+    }
+    &__slider-item {
+        position: absolute;
+        max-width: 1140px;
+        max-height: 800px;
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        transition: all ease 1s;
+    }
+    &__slider-img {
+        max-width: 703px;
+        max-height: 815px;
+        object-fit: cover;
+    }
+    &__slider-title {
+        @extend %font-monserat;
+        color: $base_background_color;
+        font-size: 110px;
+        line-height: 135px;
+        padding-bottom: 26px;
+        margin-bottom: 26px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 185px;
+            height: 1px;
+            background: #6D7278;
+        }
+    }
+    &__slider-text {
+        color: #5A5A5A;
+        max-width: 585px;
+
+    }
+    &__inner-switch {
+        padding: 10px 10px 70px 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        margin: 0 auto;
+    }
+    &__inner-switch-left {
+        width: 20px;
+        height: 20px;
+        border: solid 1px $base_background_color;
+        border-radius: 50%;
+        cursor: pointer;
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+        }
+        &:hover {
+            background-color: #e3dede;
+        }
+        &:active {
+            background-color: #393939;
+        }
+    }
+    &__inner-switch-right {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: solid 1px $base_background_color;
+        border-radius: 50%;
+        cursor: pointer;
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+        }
+        &:hover {
+            background-color: #e3dede;
+        }
+        &:active {
+            background-color: #393939;
+        }
+    }
+}
+
+.opacity0 {
+    opacity: 0;
+}
+

@@ -1,0 +1,73 @@
+
+.how-it-works {
+    padding-top: 0px;
+    padding-bottom: 110px;
+    &__title {
+        @extend %font-monserat;
+        font-size: 36px;
+        line-height: 51px;
+        color: $base_background_color;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    &__item {
+        width: 225px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+    }
+    &__img {
+        margin-right: 12px;
+    }
+    &__top-box {
+        display: flex;
+        border-bottom: 2px solid rgba(54, 56, 56, 1);
+        position: relative;
+        &::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: rgba(54, 56, 56, 1);
+            border: 1px solid rgba(54, 56, 56, 1);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -6px;
+            left: -8px;
+        }
+    }
+    &__item--one {
+        margin-right: 300px;
+    }
+    &__item--two {
+        position: relative;
+        &::after {
+            content: '';
+            width: 2px;
+            height: 20px;
+            background-color: rgba(54, 56, 56, 1);
+            position: absolute;
+            bottom: 0px;
+        }
+    }
+    &__img--two {
+        width: 38px;
+        height: 34px;
+    }
+    &__item--three {
+        padding-top: 30px;
+        margin-left: 300px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 2px;
+            height: 20px;
+            background-color: rgba(54, 56, 56, 1);
+            position: absolute;
+            top: 0px;
+        }
+    }
+    &__img {
+        margin-bottom: 15px;
+    }
+
+}

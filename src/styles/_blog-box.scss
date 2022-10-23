@@ -1,0 +1,40 @@
+
+.blog-box {
+    padding: 80px 0 120px;
+    &__title {
+        margin: 0 auto;
+        @extend %font-monserat;
+        width: 430px;
+        font-size: 36px;
+        line-height: 51px;
+        text-align: center;
+        color: inherit;
+    }
+    &__items {
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+    &__img-link {
+        display: inline-block;
+        padding-bottom: 20px;
+    }
+    &__links {
+        padding-bottom: 10px;
+    }
+    &__date,
+    &__author,
+    &__theme {
+        @extend %font-opensans;
+        color: rgba(112, 112, 112, 1);
+        font-size: 14px;
+        line-height: 28px;
+    }
+    &__title-item {
+        @extend %font-monserat;
+        font-size: 24px;
+        line-height: 38px;
+        color: $base_background_color;
+    }
+}
