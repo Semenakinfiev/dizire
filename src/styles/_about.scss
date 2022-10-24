@@ -1,0 +1,90 @@
+.about {
+    &__prev {
+        padding: 160px 0;
+        background-image: url(../img/about-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        margin-top: -53px;
+    }
+    &__prev-title {
+        text-align: center;
+        @extend %font-monserat;
+        font-size: 60px;
+        line-height: 80px;
+        color: $base_background_color;
+    }
+    &__content {
+        padding: 130px 0 40px;
+    }
+    &__content-title {
+        width: 822px;
+        @extend %font-monserat;
+        font-size: 36px;
+        line-height: 60px;
+        color: $base_background_color;
+        padding-bottom: 20px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 2px;
+            background-color: rgba(109, 114, 120, 1);
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__content-text {
+        padding-top: 23px;
+        p {
+            margin-left: 285px;
+            margin-bottom: 30px;
+            width: 825px;
+        }
+    }
+    &__vedeo {
+        min-height: 414px;
+        background-image: url(../img/about-video.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__btn-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.trailer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+
+    &__video {
+        position: relative;
+        max-width: 900px;
+        outline: none;
+    }
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        max-width: 32px;
+    }
+}

@@ -70,6 +70,5 @@ function switchGallery() {
         });
     }
 }
-
 switchGallery();
 
