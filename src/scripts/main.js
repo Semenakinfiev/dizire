@@ -10,6 +10,14 @@ headerBtn.addEventListener("click", function() {
     r_menu.classList.toggle("disable");
 });
 
+let header__btnMenu = document.querySelector(".header__btn-menu");
+let menu = document.querySelectorAll(".menu");
+
+header__btnMenu.addEventListener("click", function() {
+    for(let elem of menu) {
+       elem.classList.toggle("menu--open");
+    }
+});
 
 
 let sliders = document.querySelectorAll(".top__slider-item");
